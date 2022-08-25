@@ -26,6 +26,7 @@ let myInvestments = null;
 const Swap = ({isInPool}) => {
 
     const liquidateHandler = async (value, index, myInvestments) => {
+        console.log(index, JSON.stringify(myInvestments))
         let path = [
             myInvestments[0][index],
             '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c' 
