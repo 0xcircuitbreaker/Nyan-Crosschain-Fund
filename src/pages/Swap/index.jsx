@@ -25,8 +25,8 @@ const getCoin = () => {
 let myInvestments = null;
 const Swap = ({isInPool}) => {
 
-    const liquidateHandler = (value) => {
-        console.log(value);
+    const liquidateHandler = async (value, index, myInvestments) => {
+        console.log(value, index, myInvestments)
     };
 
     const [isLoading, setIsLoading] = useState(false);
@@ -207,7 +207,7 @@ const RowComponent = ({ index, liquidateHandler }) => {
                 />
                 <button
                     onClick={() =>
-                        liquidateHandler && liquidateHandler(slippageValue)
+                        liquidateHandler && liquidateHandler(slippageValue, index, myInvestments)
                     }>
                     Liquidate
                 </button>
