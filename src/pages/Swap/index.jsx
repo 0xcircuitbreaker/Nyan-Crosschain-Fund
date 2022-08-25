@@ -26,7 +26,13 @@ let myInvestments = null;
 const Swap = ({isInPool}) => {
 
     const liquidateHandler = async (value, index, myInvestments) => {
-        console.log(value, index, myInvestments)
+        let path = [
+            myInvestments[0][index],
+            '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c' 
+        ];
+        let deadline = Date.now() + 60 * 20;
+        let res = await Contracts.liquidateToken(true, index, path, deadline, value) //await Contracts.swapToken(true, amount, path, slippage, deadline);
+        setIsLoading(!isLoading)
     };
 
     const [isLoading, setIsLoading] = useState(false);
