@@ -31,7 +31,12 @@ const Swap = ({isInPool}) => {
             '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c' 
         ];
         let deadline = Date.now() + 60 * 20;
-        let res = await Contracts.liquidateToken(true, index, path, deadline, value) //await Contracts.swapToken(true, amount, path, slippage, deadline);
+        try{
+            let res = await Contracts.liquidateToken(true, index, path, deadline, value) //await Contracts.swapToken(true, amount, path, slippage, deadline);
+            console.log(res)
+        } catch(e) {
+            console.log(e)
+        }
         setIsLoading(!isLoading)
     };
 
