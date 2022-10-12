@@ -11,8 +11,8 @@ import { ReactComponent as Exit } from './../../assets/svg/icon_exit.svg';
 import { ReactComponent as Dollar } from './../../assets/svg/icon_dollar_green.svg';
 import { ReactComponent as Invest } from './../../assets/svg/icon_invest.svg';
 import { useEffect } from 'reactn';
-import {Contracts, Formatter, Accounts} from '../../utils/index';
-import { useLocation } from 'react-router-dom';
+import { Contracts, Formatter } from '../../utils/index';
+//import { useLocation } from 'react-router-dom';
 
 const PoolIndexInfo = ({ type }) => {
     const [showEditPop, setShowEditPop] = useState(false);

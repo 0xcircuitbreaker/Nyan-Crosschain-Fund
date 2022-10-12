@@ -1,23 +1,23 @@
 import React from 'react';
 import PopUp from '../../../component/PopUp';
-import {Contracts, Formatter, Accounts} from '../../../utils/index';
+import { Contracts, Formatter } from '../../../utils/index';
 
 const AddBNB = ({ showPop, changeShowPop, isRemove, manager, pool }) => {
 
     const [expectedETH, setExpectedETH] = React.useState(0);
     const [approvedBal, setApprovedBal] = React.useState(0);
-    const [isApproved, setIsApproved] = React.useState(true);
+    const [setIsApproved] = React.useState(true);
 
     function detectNativeToken() {
         return window.localStorage.getItem('chain');
       }
 
-    let approveToken = async (pool) => {
+    /*let approveToken = async (pool) => {
         let res = await Contracts.approvePoolToken(pool);
         if (res['status']) {
           setIsApproved(true);
         }
-    }
+    }*/
     
     let withdrawETH = async (manager, pool) => {
         let tokens = document.getElementById('token-amount').value;

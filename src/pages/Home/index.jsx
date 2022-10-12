@@ -1,5 +1,5 @@
 import './styles.scss';
-import {Link} from 'react-router-dom'
+//import {Link} from 'react-router-dom'
 import { ReactComponent as Cards } from './../../assets/svg/Cards.svg';
 import gradient1 from './../../assets/images/gradient1.png';
 import gradient2 from './../../assets/images/gradient2.png';
@@ -13,14 +13,14 @@ const Test = () => {
         return window.localStorage.getItem('chain');
     }
 
-    const getCoin = () => {
+    /*const getCoin = () => {
         let chain = window.localStorage.getItem('chain');
         if (chain == 'ETH') {
             return 'ETH';
         } else if (chain == 'BSC') {
             return 'BNB';
         }
-    }
+    }*/
     
     const switchChains = (e) => {
         window.localStorage.setItem('chain', e.target.value);

@@ -1,8 +1,8 @@
 import React from 'react';
 import './styles.scss';
-import AvailableGraph from './../../component/AvailableGraph';
-import {Contracts, Formatter} from '../../utils/index';
-import { setGlobal, getGlobal, useEffect } from 'reactn';
+//import AvailableGraph from './../../component/AvailableGraph';
+import { Contracts } from '../../utils/index';
+import { useEffect } from 'reactn';
 
 const IndexFunds = () => {
     const [indexAddresses, setIndexAddresses] = React.useState([]);

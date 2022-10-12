@@ -1,16 +1,16 @@
 import React, {useState} from 'react';
 import './styles.scss';
-import AvailableGraph from './../../component/AvailableGraph';
+//import AvailableGraph from './../../component/AvailableGraph';
 import {Contracts, Formatter, Accounts} from '../../utils/index';
-import { setGlobal, getGlobal, useEffect } from 'reactn';
+import { useEffect } from 'reactn';
 import BNBLogo from './../../assets/images/BNB Logo.png';
 
-const tempData = [{
+/*const tempData = [{
     token: 'Bonfire',
     liquidityUser: '0.01',
     amount: '0.026',
     currentValue: '0.012',
-}];
+}];*/
 
 const getCoin = () => {
     let chain = window.localStorage.getItem('chain');

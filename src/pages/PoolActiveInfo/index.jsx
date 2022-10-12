@@ -9,11 +9,11 @@ import EditPopUp from './PopUps/EditPop';
 import { ReactComponent as Exclamation } from './../../assets/svg/icon_exclamation.svg';
 import { ReactComponent as Enter } from './../../assets/svg/icon_enter.svg';
 import { ReactComponent as Exit } from './../../assets/svg/icon_exit.svg';
-import { ReactComponent as Dollar } from './../../assets/svg/icon_dollar_green.svg';
-import { ReactComponent as Invest } from './../../assets/svg/icon_invest.svg';
+//import { ReactComponent as Dollar } from './../../assets/svg/icon_dollar_green.svg';
+//import { ReactComponent as Invest } from './../../assets/svg/icon_invest.svg';
 import { useEffect } from 'reactn';
-import {Contracts, Formatter, Accounts} from '../../utils/index';
-import { useLocation } from 'react-router-dom';
+import { Contracts, Formatter } from '../../utils/index';
+//import { useLocation } from 'react-router-dom';
 
 const PoolActiveInfo = ({ type }) => {
     const [showEditPop, setShowEditPop] = useState(false);

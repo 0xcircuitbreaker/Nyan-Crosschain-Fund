@@ -1,6 +1,6 @@
 import Web3 from 'web3';
 import { Web3Util, Accounts, Formatter } from './index';
-import { setGlobal, getGlobal } from 'reactn';
+//import { setGlobal, getGlobal } from 'reactn';
 import Connector from "../ABIs/connector.json";
 import nyanManager from "../ABIs/nyanManager.json";
 import SelfManager from "../ABIs/selfManager.json";
@@ -138,7 +138,7 @@ async function getIndexCreatorContractInstance() {
     return window.indexCreatorCI
 }
 
-async function getRewardsContractInstance(){
+/*async function getRewardsContractInstance(){
     if(!window.rewardsCI) {
         
     }
@@ -148,7 +148,7 @@ async function getRewardsContractInstance(){
         getRewardsAddress()
     );
     return window.rewardsCI
-}
+}*/
 
 async function getERC20ContractInstance(address){
     if(!window.erc20CI) {
@@ -163,7 +163,7 @@ async function getERC20ContractInstance(address){
 }
 
 async function getFundHistory(){
-    let account = await Accounts.getCurrentAccount();
+    //let account = await Accounts.getCurrentAccount();
     let instance = await getConnectorContractInstance();
  
     return await instance.methods.getFundHistory().call();
@@ -171,14 +171,14 @@ async function getFundHistory(){
 }
 
 async function isFundVotingLive(){
-    let account = await Accounts.getCurrentAccount();
+    //let account = await Accounts.getCurrentAccount();
     let instance = await getFundManagerContractInstance();
 
     return await instance.methods.canBeginVoting().call();
 }
 
 async function getNextVotingBlock() {
-    let account = await Accounts.getCurrentAccount();
+    //let account = await Accounts.getCurrentAccount();
     let instance = await getFundManagerContractInstance();
 
     return await instance.methods.nextVotingPeriod().call();
@@ -197,7 +197,7 @@ async function registerAsFundManager(name){
 }
 
 async function getCandidates(){
-    let account = await Accounts.getCurrentAccount();
+    //let account = await Accounts.getCurrentAccount();
     let instance = await getFundManagerContractInstance();
 
     return await instance.methods.getAllCandidates().call();

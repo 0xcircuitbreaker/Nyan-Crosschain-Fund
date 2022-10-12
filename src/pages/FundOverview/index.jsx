@@ -1,10 +1,10 @@
 import React from 'react';
 import './styles.scss';
 import Chart from 'react-apexcharts';
-import { ReactComponent as Dollar } from './../../assets/svg/icon_dollar.svg';
+//import { ReactComponent as Dollar } from './../../assets/svg/icon_dollar.svg';
 import { ReactComponent as Rise } from './../../assets/svg/icon_rise.svg';
 import {Contracts, Formatter} from '../../utils/index';
-import { setGlobal, getGlobal, useEffect } from 'reactn';
+import { useEffect } from 'reactn';
 
 const FundOverView = () => {
     let chartData = {
@@ -113,14 +113,14 @@ const FundOverView = () => {
         return window.localStorage.getItem('chain');
     }
 
-    const getCoin = () => {
+/*    const getCoin = () => {
         let chain = window.localStorage.getItem('chain');
         if (chain == 'ETH') {
             return 'ETH';
         } else if (chain == 'BSC') {
             return 'BNB';
         }
-    }
+    }*/
 
     const [fundHoldings, setFundHoldings] = React.useState(1);
     const getFundHoldings = async() => {

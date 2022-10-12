@@ -1,5 +1,5 @@
 /** All interations with the contracts */
-import Web3 from "web3";
+//import Web3 from "web3";
 import { getGlobal, setGlobal } from 'reactn';
 import { Web3Util } from './index';
 

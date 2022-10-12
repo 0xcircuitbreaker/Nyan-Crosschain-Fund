@@ -16,8 +16,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 
-import { getGlobal } from 'reactn';
-import {Web3Util, Accounts} from './utils/index';
+//import { getGlobal } from 'reactn';
+//import {Web3Util, Accounts} from './utils/index';
 
 
 // const connect = async() => {

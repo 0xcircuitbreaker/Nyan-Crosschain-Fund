@@ -42,7 +42,7 @@ const getCoin = () => {
     }
 }
 
-const createPassivePool = async(indexTokenLength) => {
+/*const createPassivePool = async(indexTokenLength) => {
     let indexName = document.getElementById('Index name-0').value;
     let indexTicker = document.getElementById('Index token ticker-1').value;
     let tokenAddress = [];
@@ -56,7 +56,7 @@ const createPassivePool = async(indexTokenLength) => {
         i = i+1;
         tokenPercentages.push(document.getElementById('Index percentage-'+i).value);
     }
-}
+}*/
 
 
 // let indexTokenLength = 0;

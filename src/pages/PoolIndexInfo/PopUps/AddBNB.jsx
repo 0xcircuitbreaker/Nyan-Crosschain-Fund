@@ -1,6 +1,6 @@
 import React from 'react';
 import PopUp from '../../../component/PopUp';
-import {Contracts, Formatter, Accounts} from '../../../utils/index';
+import { Contracts } from '../../../utils/index';
 
 const AddBNB = ({ showPop, changeShowPop, isRemove, manager, pool }) => {
     const [syncNum, setSyncNum] = React.useState(0);

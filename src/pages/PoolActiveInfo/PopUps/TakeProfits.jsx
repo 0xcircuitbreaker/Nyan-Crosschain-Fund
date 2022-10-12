@@ -1,6 +1,6 @@
 import React from 'react';
 import PopUp from '../../../component/PopUp';
-import {Contracts, Formatter, Accounts} from '../../../utils/index';
+import { Contracts, Formatter } from '../../../utils/index';
 import { useEffect } from 'reactn';
 
 const AddBNB = ({ showPop, changeShowPop, isRemove, manager, pool, profit }) => {

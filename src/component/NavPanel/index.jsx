@@ -2,7 +2,7 @@ import './styles.scss';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ReactComponent as BigLogo } from './../../assets/svg/Logo Full.svg';
-import { ReactComponent as OverViewIcon } from './../../assets/svg/panelIcons/icon_overview.svg';
+//import { ReactComponent as OverViewIcon } from './../../assets/svg/panelIcons/icon_overview.svg';
 import { ReactComponent as PlusIcon } from './../../assets/svg/panelIcons/icon_plus.svg';
 import { ReactComponent as OTC } from './../../assets/svg/panelIcons/icon_checked doc.svg';
 import { ReactComponent as PassivePool } from './../../assets/svg/panelIcons/icon_clock.svg';
@@ -15,8 +15,8 @@ import { ReactComponent as Swap } from './../../assets/svg/panelIcons/icon_swap.
 import { ReactComponent as Community } from './../../assets/svg/panelIcons/icon_telegram.svg';
 import { ReactComponent as BurgerMenu } from './../../assets/svg/burger menu.svg';
 import { ReactComponent as BurgerMenuClose } from './../../assets/svg/close burger menu.svg';
-import { Formatter, Contracts, Accounts } from '../../utils/index';
-import { setGlobal, getGlobal, useEffect } from 'reactn';
+import { Accounts } from '../../utils/index';
+import { useEffect } from 'reactn';
 
 const Test = () => {
     const [expanded, setExpand] = useState(false);
@@ -33,9 +33,9 @@ const Test = () => {
         console.log(myAccount);
     }
 
-    async function disconnectWallet() {
+   /* async function disconnectWallet() {
 
-    }
+    }*/
 
     useEffect(() => {
         async function loadData() {

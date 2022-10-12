@@ -1,8 +1,8 @@
 import React from 'react';
 import './styles.scss';
 import AvailableGraph from './../../component/AvailableGraph';
-import {Contracts, Formatter} from '../../utils/index';
-import { setGlobal, getGlobal, useEffect } from 'reactn';
+import {Contracts} from '../../utils/index';
+import { useEffect } from 'reactn';
 
 const ActivePools = () => {
     const [activePools, setActivePools] = React.useState({});
