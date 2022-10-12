@@ -1,7 +1,7 @@
 //import Web3 from "web3";
 //https://github.com/CharlesStover/reactn
 import Web3 from "web3";
-import Web3Modal, { WEB3_CONNECT_MODAL_ID } from "web3modal";
+import Web3Modal from "web3modal";
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import { setGlobal, getGlobal } from 'reactn';
 // import { Provider } from "react-redux";

@@ -6,7 +6,7 @@ import nyanManager from "../ABIs/nyanManager.json";
 import SelfManager from "../ABIs/selfManager.json";
 import SelfManagerBEP from "../ABIs/selfManagerBEP.json";
 import IndexFundBEP from "../ABIs/indexFundBEP.json"
-import NyanRewards from "../ABIs/rewards.json";
+//import NyanRewards from "../ABIs/rewards.json";
 import Swap from "../ABIs/pancakeSwapConnector.json";
 import ERC20 from "../ABIs/ERC20.json";
 
@@ -203,7 +203,7 @@ async function getCandidates(){
     return await instance.methods.getAllCandidates().call();
 }
 
-async function voteForFundManager(name){
+/*async function voteForFundManager(name){
     let account = await Accounts.getCurrentAccount();
     let instance = await getFundManagerContractInstance();
     
@@ -212,7 +212,7 @@ async function voteForFundManager(name){
         value: 50000000000000000
     });
     
-}
+}*/
 
 async function getAllSelfPools() {
     let instance = await getSelfManagerContractInstance();
@@ -225,7 +225,7 @@ async function getAllSelfPools() {
 }
 
 async function getSelfPoolData(manager) {
-    let account = await Accounts.getCurrentAccount();
+    //let account = await Accounts.getCurrentAccount();
     let instance = await getSelfManagerContractInstance();
     try {
         return await instance.methods.getPool(manager).call();
@@ -264,7 +264,7 @@ async function addPoolETH(manager, pool, ETH) {
 }
 
 async function estimateETHWithdrawal(manager, pool, tokens) {
-    let account = await Accounts.getCurrentAccount();
+    //let account = await Accounts.getCurrentAccount();
     let instance = await getSelfManagerContractInstance();
     if (window.localStorage.getItem('chain') == 'ETH') {
         return await instance.methods.estimateTokensForETH(manager, pool, tokens).call();
@@ -368,7 +368,7 @@ async function getIndexFundAddresses() {
 
 
 async function getManagerHoldings() {
-    let isSelfManager = true;
+    //let isSelfManager = true;
     let holdings;
     let account = await Accounts.getCurrentAccount();
     let instance = await getSelfManagerContractInstance();

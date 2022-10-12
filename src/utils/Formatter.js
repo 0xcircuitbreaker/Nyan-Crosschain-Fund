@@ -1,4 +1,4 @@
-import { Web3Util } from '.';
+//import { Web3Util } from '.';
 
 const Web3Utils = require('web3-utils');
 
