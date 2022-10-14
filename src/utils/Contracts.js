@@ -218,7 +218,7 @@ async function getAllSelfPools() {
     let instance = await getSelfManagerContractInstance();
     try {
         let pools = await instance.methods.getPoolsArray().call();
-        return await instance.methods.getPools(0, pools.length).call();
+        return await instance.methods.getPools(2, pools.length).call();
     } catch(e) {
         console.log(e)
     }
