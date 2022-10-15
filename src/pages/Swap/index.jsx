@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useState} from 'react';
 import './styles.scss';
 //import AvailableGraph from './../../component/AvailableGraph';
@@ -14,9 +15,9 @@ import BNBLogo from './../../assets/images/BNB Logo.png';
 
 const getCoin = () => {
     let chain = window.localStorage.getItem('chain');
-    if (chain == 'ETH') {
+    if (chain === 'ETH') {
         return 'ETH';
-    } else if (chain == 'BSC') {
+    } else if (chain === 'BSC') {
         return 'BNB';
     }
 }
@@ -59,7 +60,7 @@ const Swap = ({isInPool}) => {
         let arr = [];
         if (myInvestments) {
             for (let i = 0; i < myInvestments[0].length; i++) {
-                if (myInvestments[1][i] != 0) {
+                if (myInvestments[1][i] !== 0) {
                     arr.push(
                         <RowComponent
                             index={i}
@@ -119,7 +120,7 @@ const SwapForm = () => {
         ];
         let slippage = document.getElementById('slippage').value*100;
         let deadline = Date.now() + 60 * 20;
-        let res = await Contracts.swapToken(true, amount, path, slippage, deadline);
+        await Contracts.swapToken(true, amount, path, slippage, deadline);
         setIsLoading(!isLoading)
     }
 

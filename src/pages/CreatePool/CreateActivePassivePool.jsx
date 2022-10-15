@@ -35,9 +35,9 @@ const CreateActivePassivePool = () => {
 
 const getCoin = () => {
     let chain = window.localStorage.getItem('chain');
-    if (chain == 'ETH') {
+    if (chain === 'ETH') {
         return 'ETH';
-    } else if (chain == 'BSC') {
+    } else if (chain === 'BSC') {
         return 'BNB';
     }
 }
@@ -150,12 +150,12 @@ const PassivePool = ({ onRegClick }) => {
                         </label>
                         <input id={el+'-'+index} type='text' className='input_box' />
                     </div>
-                    {el == 'Index percentage' ?
+                    {el === 'Index percentage' ?
                         <div className="divider"></div>
                         :
                         null
                     }
-                    {el == 'Index token ticker' ?
+                    {el === 'Index token ticker' ?
                         <div className="divider"></div>
                         :
                         null

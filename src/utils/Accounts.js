@@ -6,7 +6,7 @@ import { Web3Util } from './index';
 const getCurrentAccount = async() => {
     let accounts = getGlobal().accounts;
     console.log(accounts);
-    if(!accounts || !accounts[0] || accounts == undefined) {
+    if(!accounts || !accounts[0] || accounts === undefined) {
       
         let web3 = await Web3Util.createInstance();
         console.log(web3);

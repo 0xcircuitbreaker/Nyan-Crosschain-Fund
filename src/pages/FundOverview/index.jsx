@@ -182,6 +182,7 @@ const FundOverView = () => {
         
     
         loadData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     
     console.log(fundHoldings);
@@ -214,14 +215,14 @@ const FundOverView = () => {
                             // height={350}
                         />
                     </div>
-                    {getChain() == 'ETH'? 
+                    {getChain() === 'ETH'? 
                         <button className='align_center_ml_sm min_45_sm'>
                             {/* View contract on ETHScan */}
                         </button>
                         :
                         null
                     }
-                    {getChain() == 'BSC'? 
+                    {getChain() === 'BSC'? 
                         <button className='align_center_ml_sm min_45_sm'>
                             View contract on BSCScan
                         </button>

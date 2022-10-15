@@ -24,7 +24,7 @@ const AddBNB = ({ showPop, changeShowPop, isRemove, manager, pool, profit }) => 
         }       
     
         loadData();
-    }, []);
+    }, [manager, pool, profit]);
 
     return (
         <PopUp

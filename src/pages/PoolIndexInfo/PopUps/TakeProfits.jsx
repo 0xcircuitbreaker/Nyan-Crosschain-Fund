@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
 import PopUp from '../../../component/PopUp';
 import { Contracts, Formatter } from '../../../utils/index';

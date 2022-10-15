@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import './styles.scss';
 import React, { useState } from 'react';
 import Chart from 'react-apexcharts';

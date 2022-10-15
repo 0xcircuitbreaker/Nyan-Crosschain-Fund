@@ -11,7 +11,7 @@ import Swap from "../ABIs/pancakeSwapConnector.json";
 import ERC20 from "../ABIs/ERC20.json";
 
 function getFundAddress() {
-    if (window.localStorage.getItem('chain') == 'ETH') {
+    if (window.localStorage.getItem('chain') === 'ETH') {
         return '0x2c9728ad35C1CfB16E3C1B5045bC9BA30F37FAc5'
     } else {
         return '0x5D183417Ad08373e61fFfAC203bAbC44bA8fDf59'
@@ -19,7 +19,7 @@ function getFundAddress() {
 }
 
 function getConnectorAddress() {
-    if (window.localStorage.getItem('chain') == 'ETH') {
+    if (window.localStorage.getItem('chain') === 'ETH') {
         return '0x60d70dF1c783b1E5489721c443465684e2756555'
     } else {
         return '0x3129787d931c686F926EaC9B69223E12119F7F52'
@@ -27,7 +27,7 @@ function getConnectorAddress() {
 }
 
 function getSelfManagerAddress() {
-    if (window.localStorage.getItem('chain') == 'ETH') {
+    if (window.localStorage.getItem('chain') === 'ETH') {
         return '0x97d7c6dE394631C47760C234F4Bcf564889B8721'
     } else {
         return '0x4b09526edBe6E14248Bfba18eBE37274Ef62754C'
@@ -35,7 +35,7 @@ function getSelfManagerAddress() {
 }
 
 function getIndexCreatorAddress() {
-    if (window.localStorage.getItem('chain') == 'ETH') {
+    if (window.localStorage.getItem('chain') === 'ETH') {
         return ''
     } else {
         return '0xc94477bC3EC528a7fEcAD912AfD721F80656fA87'
@@ -43,7 +43,7 @@ function getIndexCreatorAddress() {
 }
 
 function getSelfManagerABI() {
-    if (window.localStorage.getItem('chain') == 'ETH') {
+    if (window.localStorage.getItem('chain') === 'ETH') {
         return SelfManager.abi;
     } else {
         return SelfManagerBEP.abi;
@@ -51,7 +51,7 @@ function getSelfManagerABI() {
 }
 
 function getRewardsAddress() {
-    if (window.localStorage.getItem('chain') == 'ETH') {
+    if (window.localStorage.getItem('chain') === 'ETH') {
         return '0x868f7622F57b62330Db8b282044d7EAf067fAcfe'
     } else {
         return '0x0654D2efb607dc5C451e6513c8Dd3997977cA603'
@@ -59,7 +59,7 @@ function getRewardsAddress() {
 }
 
 function getSwapAddress() {
-    if (window.localStorage.getItem('chain') == 'ETH') {
+    if (window.localStorage.getItem('chain') === 'ETH') {
         return ''
     } else {
         return '0xa4F51ca1C9f14Ac741ec5d1EbEeF128A0227EfcA'
@@ -266,7 +266,7 @@ async function addPoolETH(manager, pool, ETH) {
 async function estimateETHWithdrawal(manager, pool, tokens) {
     //let account = await Accounts.getCurrentAccount();
     let instance = await getSelfManagerContractInstance();
-    if (window.localStorage.getItem('chain') == 'ETH') {
+    if (window.localStorage.getItem('chain') === 'ETH') {
         return await instance.methods.estimateTokensForETH(manager, pool, tokens).call();
     } else {
         return await instance.methods.estimateTokensForBNB(manager, pool, tokens).call();
@@ -301,7 +301,7 @@ async function withdrawPoolETH(manager, pool, tokens) {
     let account = await Accounts.getCurrentAccount();
     let instance = await getSelfManagerContractInstance();
 
-    if (window.localStorage.getItem('chain') == 'ETH') {
+    if (window.localStorage.getItem('chain') === 'ETH') {
         return await instance.methods.tokensForETH(manager, pool, tokens).send({
             from: account
         });
